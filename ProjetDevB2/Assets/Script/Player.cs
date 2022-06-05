@@ -14,7 +14,18 @@ public class Player : Photon.MonoBehaviour
 
     public bool IsGrounded = false;
     public float MoveSpeed;
-    public float JumpForce;
+
+    public float moveInput;
+    public float JumpSpeed;
+    private bool isOnGround;
+    public Transform playerPos;
+    public float positionRadius;
+    public LayerMask ground;
+    private float airTimeCount;
+    public float airTime;
+    private bool inAir;
+    private bool doubleJump;
+
 
     private void Awake()
     {
@@ -36,9 +47,58 @@ public class Player : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             CheckInput();
-            //PlayAnim();
+            isOnGround = Physics2D.OverlapCircle(playerPos.position, positionRadius, ground);
+
+
+            if (Input.GetKeyDown(KeyCode.Space) )
+            {
+                if(isOnGround == true || doubleJump)
+                {
+                    inAir = true;
+                    airTimeCount = airTime;
+                    rb.velocity = Vector2.up * JumpSpeed;
+                    doubleJump = !doubleJump;
+                }
+            }
+
+   
+
+            if (Input.GetKeyDown(KeyCode.Space) && inAir == true)
+            {
+                if(airTimeCount > 0)
+                {
+                    rb.velocity = Vector2.up * JumpSpeed;
+                    airTimeCount -= Time.deltaTime;
+                } else
+                {
+                    inAir = false;
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                inAir = false;
+  
+            }
+            if (inAir == true)
+            {
+                anim.SetBool("isJumping", true);
+            } 
+     
+            else
+            {
+;                anim.SetBool("isJumping", false);
+            }
+
         }
     }
+
+    private void FixedUpdate()
+    {
+        moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * MoveSpeed, rb.velocity.y);
+    }
+
+
 
     private void CheckInput()
     {
@@ -47,7 +107,8 @@ public class Player : Photon.MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.A))
         {
-            photonView.RPC("FlipTrue", PhotonTargets.AllBuffered);        }
+            photonView.RPC("FlipTrue", PhotonTargets.AllBuffered);        
+        }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -63,20 +124,9 @@ public class Player : Photon.MonoBehaviour
         {
             anim.SetBool("isMoving", false);
         }
+
+
     }
-
-    /*private void PlayAnim()
-    {
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            anim.SetBool("isMoving", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            anim.SetBool("isMoving", true);
-        }
-    }*/
 
     [PunRPC]
     private void FlipTrue()
