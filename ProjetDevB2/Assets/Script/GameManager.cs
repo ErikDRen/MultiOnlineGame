@@ -8,10 +8,16 @@ public class GameManager : MonoBehaviour
     public GameObject PlayerPrefab;
     public GameObject GameCanvas;
     public GameObject SceneCamera;
+    public Text PingText;
 
     private void Awake()
     {
         GameCanvas.SetActive(true);
+    }
+
+    private void Update()
+    {
+        PingText.text = "PING: " + PhotonNetwork.GetPing();
     }
 
 
