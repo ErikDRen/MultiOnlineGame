@@ -26,6 +26,9 @@ public class Player : Photon.MonoBehaviour
     private bool inAir;
     private bool doubleJump;
 
+    public GameObject BulletObject;
+    public Transform FirePos;
+
 
     private void Awake()
     {
@@ -50,7 +53,7 @@ public class Player : Photon.MonoBehaviour
             isOnGround = Physics2D.OverlapCircle(playerPos.position, positionRadius, ground);
 
 
-            if (Input.GetKeyDown(KeyCode.Space) )
+            if (Input.GetKeyDown(KeyCode.W) )
             {
                 if(isOnGround == true || doubleJump)
                 {
@@ -58,13 +61,14 @@ public class Player : Photon.MonoBehaviour
                     airTimeCount = airTime;
                     rb.velocity = Vector2.up * JumpSpeed;
                     doubleJump = !doubleJump;
+
+
                 }
             }
 
-   
-
-            if (Input.GetKeyDown(KeyCode.Space) && inAir == true)
+            if (Input.GetKeyDown(KeyCode.W) && inAir == true)
             {
+                
                 if(airTimeCount > 0)
                 {
                     rb.velocity = Vector2.up * JumpSpeed;
@@ -74,16 +78,17 @@ public class Player : Photon.MonoBehaviour
                     inAir = false;
                 }
             }
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 inAir = false;
   
             }
+
             if (inAir == true)
             {
                 anim.SetBool("isJumping", true);
-            } 
-     
+                //anim.Play("jump");
+            }
             else
             {
 ;                anim.SetBool("isJumping", false);
@@ -105,6 +110,12 @@ public class Player : Photon.MonoBehaviour
         var move = new Vector3(Input.GetAxisRaw("Horizontal"), 0);
         transform.position += move * MoveSpeed * Time.deltaTime;
 
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("shootTrigger");
+            Shoot();
+        }
+
         if(Input.GetKeyDown(KeyCode.A))
         {
             photonView.RPC("FlipTrue", PhotonTargets.AllBuffered);        
@@ -119,13 +130,29 @@ public class Player : Photon.MonoBehaviour
         {
             anim.SetBool("isMoving", true);
         }
-
         else
         {
             anim.SetBool("isMoving", false);
         }
 
 
+    }
+
+    private void Shoot()
+    {
+        if(sr.flipX == false)
+        {
+            GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+        }
+
+        if (sr.flipX == true)
+        {
+            GameObject obj = PhotonNetwork.Instantiate(BulletObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+            obj.GetComponent<PhotonView>().RPC("ChangeDir_left", PhotonTargets.AllBuffered);
+        }
+
+
+    
     }
 
     [PunRPC]

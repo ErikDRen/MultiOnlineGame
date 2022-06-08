@@ -1,11 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
+    - PhotonAnimatorViewEditor
+    - PhotonTransformViewEditor
+    - PhotonViewInspector
     - PunSceneSettings
     Assembly-CSharp.dll:
+    - Bullet
     - ChatManager
     - DestroyFeed
     - GameManager
+    - Health
     - MenuController
     - PhotonAnimatorView
     - PhotonTransformView
@@ -32,8 +37,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -104,11 +111,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4190}
     - Class: 114
-      Script: {instanceID: 5228}
+      Script: {instanceID: 5194}
     - Class: 114
-      Script: {instanceID: 5712}
+      Script: {instanceID: 5230}
     - Class: 114
-      Script: {instanceID: 18078}
+      Script: {instanceID: 5714}
+    - Class: 114
+      Script: {instanceID: 26936}
+    - Class: 114
+      Script: {instanceID: 39646}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -181,11 +192,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4088}
     - Class: 114
-      Script: {instanceID: 5228}
+      Script: {instanceID: 5194}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5230}
     - Class: 114
-      Script: {instanceID: 18078}
+      Script: {instanceID: 5402}
+    - Class: 114
+      Script: {instanceID: 26936}
+    - Class: 114
+      Script: {instanceID: 39646}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -675,7 +690,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 363dff6303af0be95c70083a8b9ddb23
+      Hash: f80b3e1fc9f7116312547ec225c2cdcf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -885,6 +900,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 9bf34c33dc725030aaa6f28a8a439597
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatManager
+  - hash:
+      serializedVersion: 2
       Hash: 15aa75104394eec0bc99c0cdb18f7155
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -963,10 +984,16 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: dc3b8d6a90da926137d623964bfcb46c
+      Hash: f1d0d89b89b0c2fafcdc59f302d888fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ChatManager
+    className: Bullet
+  - hash:
+      serializedVersion: 2
+      Hash: 531246e91b9acddf0a05ade903052c25
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
