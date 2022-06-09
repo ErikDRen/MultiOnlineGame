@@ -28,25 +28,21 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - ChangeDir_left
   - Chat
-  - ColorRpc
+  - DestroyObject
   - DestroyRpc
-  - DoJump
-  - Flash
+  - FlipFalse
+  - FlipTrue
   - InstantiateRpc
-  - Marco
   - PickupItemInit
-  - Polo
   - PunPickup
   - PunPickupSimple
   - PunRespawn
+  - ReduceHealth
   - RequestForPickupItems
   - RequestForPickupTimes
-  - TaggedPlayer
-  - FlipFalse
-  - FlipTrue
   - SendMessage
-  - ChangeDir_left
-  - DestroyObject
-  - ReduceHealth
+  - Dead
+  - Respawn
   DisableAutoOpenWizard: 1

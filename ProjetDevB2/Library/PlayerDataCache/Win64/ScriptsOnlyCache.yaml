@@ -1,9 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
-    - PhotonAnimatorViewEditor
-    - PhotonTransformViewEditor
-    - PhotonViewInspector
     - PunSceneSettings
     Assembly-CSharp.dll:
     - Bullet
@@ -37,10 +34,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -87,39 +82,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1466}
     - Class: 114
-      Script: {instanceID: 1522}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3326}
     - Class: 114
-      Script: {instanceID: 3446}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 4088}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 4190}
+      Script: {instanceID: 3450}
     - Class: 114
-      Script: {instanceID: 5194}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 5230}
+      Script: {instanceID: 4194}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 5198}
     - Class: 114
-      Script: {instanceID: 26936}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 39646}
+      Script: {instanceID: 5718}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,39 +163,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1466}
     - Class: 114
-      Script: {instanceID: 1522}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1996}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3326}
     - Class: 114
-      Script: {instanceID: 3446}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 4088}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5194}
+      Script: {instanceID: 3450}
     - Class: 114
-      Script: {instanceID: 5230}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5198}
     - Class: 114
-      Script: {instanceID: 26936}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 39646}
+      Script: {instanceID: 5406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,6 +227,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f1d0d89b89b0c2fafcdc59f302d888fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -498,6 +499,12 @@ ScriptsOnlyBuild:
     className: LimbSolver2D
   - hash:
       serializedVersion: 2
+      Hash: f06b903bfc9e8578166ff96a892734b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
+  - hash:
+      serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -690,7 +697,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: f80b3e1fc9f7116312547ec225c2cdcf
+      Hash: 6f929fdd15a9a086f7b8b2c994f4eb42
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -702,7 +709,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 7b96de655fb33aa788ff4a4c7f0e89ba
+      Hash: dc16ac6f3080e81dc310ec49b449a10d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -982,18 +989,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: f1d0d89b89b0c2fafcdc59f302d888fa
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bullet
-  - hash:
-      serializedVersion: 2
-      Hash: 531246e91b9acddf0a05ade903052c25
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Health
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

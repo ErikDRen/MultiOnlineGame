@@ -538,6 +538,7 @@ MonoBehaviour:
   airTime: 0.4
   BulletObject: {fileID: 2086863443812389025, guid: bd2b668b2c23e2f488c9745b5e8fccb1, type: 3}
   FirePos: {fileID: 7752325321122300208}
+  DisableInput: 0
 --- !u!114 &4365507793270418166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +723,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21b308db2935f844893abf8abec20e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthAmount: 30
   FillImage: {fileID: 474874828922401759}
+  plMove: {fileID: 4365507793270418167}
+  rb: {fileID: 4365507793270418164}
+  bc: {fileID: 4365507793270418165}
+  sr: {fileID: 4365507793270418168}
+  PlayerCanvas: {fileID: 3225185389446683613}
 --- !u!1 &5719737891112927673
 GameObject:
   m_ObjectHideFlags: 0

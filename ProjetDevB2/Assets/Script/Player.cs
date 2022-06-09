@@ -29,6 +29,8 @@ public class Player : Photon.MonoBehaviour
     public GameObject BulletObject;
     public Transform FirePos;
 
+    public bool DisableInput = false;
+
 
     private void Awake()
     {
@@ -47,8 +49,9 @@ public class Player : Photon.MonoBehaviour
 
     private void Update()
     {
-        if (photonView.isMine)
+        if (photonView.isMine && !DisableInput)
         {
+            
             CheckInput();
             isOnGround = Physics2D.OverlapCircle(playerPos.position, positionRadius, ground);
 
