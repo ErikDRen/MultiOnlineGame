@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Player : Photon.MonoBehaviour
 {
@@ -30,10 +31,13 @@ public class Player : Photon.MonoBehaviour
     public Transform FirePos;
 
     public bool DisableInput = false;
+    public CinemachineConfiner confiner;
+
 
 
     private void Awake()
     {
+
         photonView = GetComponent<PhotonView>();
         if (photonView.isMine)
         {

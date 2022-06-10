@@ -11,10 +11,12 @@ public class Bullet : Photon.MonoBehaviour
     public float BulletDamage;
 
 
+
     private void Awake()
     {
         StartCoroutine("DestroyByTime");
     }
+
 
     IEnumerator DestroyByTime()
     {
@@ -31,11 +33,13 @@ public class Bullet : Photon.MonoBehaviour
     [PunRPC]
     public void DestroyObject()
     {
+        
         Destroy(this.gameObject);
     }
 
     private void Update()
     {
+
         if(!MoveDir)
         {
             transform.Translate(Vector2.right * MoveSpeed * Time.deltaTime);
@@ -61,7 +65,6 @@ public class Bullet : Photon.MonoBehaviour
             {
                 target.RPC("ReduceHealth", PhotonTargets.AllBuffered, BulletDamage);
             }
-
             this.GetComponent<PhotonView>().RPC("DestroyObject", PhotonTargets.AllBuffered);
         }
     }

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private float TimerAmount = 5f;
     private bool RunSpawnTimer= false;
 
+
     private void Awake()
     {
         Instance = this;
@@ -36,13 +37,14 @@ public class GameManager : MonoBehaviour
     {
         ChekInput();
         PingText.text = "PING: " + PhotonNetwork.GetPing();
-
-        if(RunSpawnTimer)
-        {
-            StartRespawn();
-        }
+            if (RunSpawnTimer)
+            {
+                //Debug.Log(playerLive);
+                StartRespawn();
+            }
+        
+ 
     }
-
     public void EnableRespawn()
     {
         TimerAmount = 5f;
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void StartRespawn()
     {
+
         TimerAmount -= Time.deltaTime;
         RespawnTimerText.text = "Respawning in " + TimerAmount.ToString("F0");
 
@@ -98,6 +101,8 @@ public class GameManager : MonoBehaviour
         PhotonNetwork.LeaveRoom();
         PhotonNetwork.LoadLevel("MainMenu");
     }
+
+
 
     private void OnPhotonPlayerConnected(PhotonPlayer player)
     {

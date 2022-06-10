@@ -8,6 +8,7 @@
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Unity.Mathematics.dll"
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Unity.2D.IK.Runtime.dll"
+-a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Cinemachine.dll"
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll"
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Unity.2D.Animation.Runtime.dll"
 -a="E:\Unity\Project\MultiOnlineGame\ProjetDevB2\Library\PlayerScriptAssemblies\Unity.2D.Common.Runtime.dll"

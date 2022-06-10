@@ -14,6 +14,9 @@ public class Health : Photon.MonoBehaviour
     public SpriteRenderer sr;
     public GameObject PlayerCanvas;
 
+
+
+
     private void Awake()
     {
         if (photonView.isMine)
@@ -56,7 +59,7 @@ public class Health : Photon.MonoBehaviour
     [PunRPC]
     private void Respawn()
     {
-        rb.gravityScale = 3;
+        rb.gravityScale = 5;
         bc.enabled = true;
         sr.enabled = true;
         PlayerCanvas.SetActive(true);
