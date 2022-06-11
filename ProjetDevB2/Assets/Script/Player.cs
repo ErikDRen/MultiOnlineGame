@@ -33,6 +33,8 @@ public class Player : Photon.MonoBehaviour
     public bool DisableInput = false;
     public CinemachineConfiner confiner;
 
+    public int live = 5;
+
 
 
     private void Awake()
@@ -55,7 +57,7 @@ public class Player : Photon.MonoBehaviour
     {
         if (photonView.isMine && !DisableInput)
         {
-            
+            //Debug.Log(live);
             CheckInput();
             isOnGround = Physics2D.OverlapCircle(playerPos.position, positionRadius, ground);
 

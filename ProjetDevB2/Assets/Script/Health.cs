@@ -31,15 +31,17 @@ public class Health : Photon.MonoBehaviour
         ModifyHealth(amount);
     }
 
-    private void CheckHealth()
+    public int CheckHealth()
     {
         FillImage.fillAmount = HealthAmount / 100f;
         if(photonView.isMine && HealthAmount <= 0)
         {
+            plMove.live -= 1;
             GameManager.Instance.EnableRespawn();
             plMove.DisableInput = true;
             this.GetComponent<PhotonView>().RPC("Dead", PhotonTargets.AllBuffered);
         }
+        return plMove.live;
     }
 
     public void EnableInput()

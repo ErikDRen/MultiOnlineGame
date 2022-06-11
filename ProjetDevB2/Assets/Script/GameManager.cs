@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     private float TimerAmount = 5f;
     private bool RunSpawnTimer= false;
 
+    public int test = 5;
+
 
     private void Awake()
     {
@@ -35,13 +37,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        ChekInput();
         PingText.text = "PING: " + PhotonNetwork.GetPing();
-            if (RunSpawnTimer)
+        ChekInput();
+        Debug.Log(test);
+        if (RunSpawnTimer)
             {
-                //Debug.Log(playerLive);
-                StartRespawn();
+                if(test > 0)
+                {
+                    StartRespawn();
+
+                } 
+                else
+                {
+                    RespawnTimerText.text = "dead";
+                }
             }
+   
         
  
     }
@@ -56,11 +67,13 @@ public class GameManager : MonoBehaviour
     {
 
         TimerAmount -= Time.deltaTime;
-        RespawnTimerText.text = "Respawning in " + TimerAmount.ToString("F0");
+        RespawnTimerText.text = "Respawning in " + TimerAmount.ToString("F0") + "\n Live " + test.ToString("F0");
+        
 
         if(TimerAmount <= 0)
         {
             LocalPlayer.GetComponent<PhotonView>().RPC("Respawn", PhotonTargets.AllBuffered);
+            test = LocalPlayer.GetComponent<Health>().CheckHealth();
             LocalPlayer.GetComponent<Health>().EnableInput();
             RespawnLocation();
             RespawnMenu.SetActive(false);
@@ -70,7 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void RespawnLocation()
     {
-        float randomValue = Random.Range(-3, 5f);
+        float randomValue = Random.Range(-10f, 10f);
         LocalPlayer.transform.localPosition = new Vector2(randomValue, 3f) ;
     }
 
@@ -90,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        float randomValue = Random.Range(-1f, 1f);
+        float randomValue = Random.Range(-10f, 10f);
         PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(this.transform.position.x * randomValue, this.transform.position.y), Quaternion.identity, 0);
         GameCanvas.SetActive(false);
         SceneCamera.SetActive(true);

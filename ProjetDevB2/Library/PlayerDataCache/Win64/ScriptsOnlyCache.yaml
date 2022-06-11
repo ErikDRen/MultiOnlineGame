@@ -23,7 +23,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -39,10 +38,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -898,7 +895,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: bd97f696be4925267db64a3913ebd362
+      Hash: 6806d8e8e13593916e0aba43dadce054
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -916,7 +913,7 @@ ScriptsOnlyBuild:
     className: CinemachineTransposer
   - hash:
       serializedVersion: 2
-      Hash: dc16ac6f3080e81dc310ec49b449a10d
+      Hash: 35025904a6820554e319ece923de5971
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
