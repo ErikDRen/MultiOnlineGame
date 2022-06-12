@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     private float TimerAmount = 5f;
     private bool RunSpawnTimer= false;
 
-    public int test = 5;
+    private int test = 4;
 
 
     private void Awake()
@@ -39,7 +39,16 @@ public class GameManager : MonoBehaviour
     {
         PingText.text = "PING: " + PhotonNetwork.GetPing();
         ChekInput();
-        Debug.Log(test);
+
+        /*foreach(var player in PhotonNetwork.otherPlayers)
+        {
+            if(test < 0)
+            {
+              
+            }
+            Debug.Log(player);  
+        }*/
+
         if (RunSpawnTimer)
             {
                 if(test > 0)

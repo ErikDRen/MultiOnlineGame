@@ -58,6 +58,10 @@ public class Player : Photon.MonoBehaviour
         if (photonView.isMine && !DisableInput)
         {
             //Debug.Log(live);
+            if(live < 0)
+            {
+                PlayerNameText.text = "dead";
+            }
             CheckInput();
             isOnGround = Physics2D.OverlapCircle(playerPos.position, positionRadius, ground);
 

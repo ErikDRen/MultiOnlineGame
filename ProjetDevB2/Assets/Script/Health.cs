@@ -17,6 +17,7 @@ public class Health : Photon.MonoBehaviour
 
 
 
+
     private void Awake()
     {
         if (photonView.isMine)
