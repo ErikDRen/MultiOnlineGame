@@ -1,7 +1,7 @@
 # MultiOnlineGame
 ## 2d muliplayer online game made with Unity
 
-## For test the game you just need to download the build.rar directory, unzip and execute "ProjetDevB2.exe"
+## For try the game you just need to download the build.rar directory, unzip and execute "ProjetDevB2.exe"
 
 ## How to play : 
 ### &emsp; - Enter a pseudo with 3 character or more
