@@ -23,5 +23,5 @@
 ### &emsp; - Z : jump/double jumps
 ### &emsp; - J : projectile
 ### &emsp; - RightShift : chat
-<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Chat_1.PNG" width="800" height="500">
-<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Chat_2.PNG" width="800" height="500">
+<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Chat_1.PNG" width="600" height="400">
+<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Chat_2.PNG" width="600" height="400">
