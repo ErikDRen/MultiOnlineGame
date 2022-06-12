@@ -5,7 +5,7 @@
 
 ## How to play : 
 ### &emsp; - Enter a pseudo with 3 character or more
-<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Pseudo_1.PNG" width="800" height="600">
+<img src="https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Pseudo_1.PNG" width="800" height="500">
 ![alt text](https://github.com/ErikDRen/MultiOnlineGame/blob/main/forReadme/img/Pseudo_2.PNG)
 
 ### &emsp; - Create or join a room with a name (if you try to create a room with name alredy use for room, nothing will happen and if you join a room who dont exist you will create the room)
